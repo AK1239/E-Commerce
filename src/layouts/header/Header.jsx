@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/logo.png";
 import { FiMenu } from "react-icons/fi";
@@ -8,49 +9,56 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [menu, setMenu] = useState("home");
   const menuRef = useRef(null);
+  const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const openMenu = () => {
-    menuRef.current.style.right = "0";
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === "/") {
+      setMenu("home");
+    } else if (path === "/about") {
+      setMenu("about");
+    } else if (path === "/shop") {
+      setMenu("shop");
+    } else if (path === "/contact") {
+      setMenu("contact");
+    }
+  }, [location.pathname]);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
-  const closeMenu = () => {
-    menuRef.current.style.right = "-350px";
-  };
   return (
     <section id="header">
       <a href="#">
         <img src={logo} alt="Logo" className="logo" />
       </a>
-      <span className="menu-icon" onClick={openMenu}>
+      <span className="menu-icon" onClick={toggleMenu}>
         <FiMenu />
       </span>
       <div>
-        <ul id="navbar" ref={menuRef}>
-          <span className="close-button" onClick={closeMenu}>
+        <ul id="navbar" ref={menuRef} className={menuOpen ? "open" : ""}>
+          <span className="close-button" onClick={toggleMenu}>
             <FaTimes />
           </span>
           <li>
-            <Link to="/" className={menu === "home" ? "active" : ""} onClick={() => setMenu("home")}>
+            <Link to="/" className={menu === "home" ? "active" : ""}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/shop" className={menu === "shop" ? "active" : ""} onClick={() => setMenu("shop")}>
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className={menu === "about" ? "active" : ""} onClick={() => setMenu("about")}>
+            <Link to="/about" className={menu === "about" ? "active" : ""}>
               About
             </Link>
           </li>
           <li>
-            <Link to="/blog" className={menu === "blog" ? "active" : ""} onClick={() => setMenu("blog")}>
-              Blog
+            <Link to="/shop" className={menu === "shop" ? "active" : ""}>
+              Shop
             </Link>
           </li>
           <li>
-            <Link to="/contact" className={menu === "contact" ? "active" : ""} onClick={() => setMenu("contact")}>
+            <Link to="/contact" className={menu === "contact" ? "active" : ""}>
               Contact
             </Link>
           </li>

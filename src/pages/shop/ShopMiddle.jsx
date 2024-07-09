@@ -1,5 +1,5 @@
 import React from "react";
-import "./MiddleContainer.css";
+import "./ShopMiddle.css";
 import { products } from "../../layouts/data.js";
 
 const Product = ({ src, brand, name, price }) => (
@@ -23,33 +23,27 @@ const Product = ({ src, brand, name, price }) => (
   </div>
 );
 
-const Section = ({ title, subtitle, products }) => (
-  <section id="product1" className="section-p1">
-    <h2>{title}</h2>
-    <p>{subtitle}</p>
-    <div className="pro-container">
-      {products.map((product) => (
-        <Product key={product.id} {...product} />
-      ))}
-    </div>
-  </section>
-);
-
-const MiddleContainer = () => {
-  const featuredProducts = products.slice(0, 8); // First 8 products as featured
-  const newArrivals = products.slice(8); // Remaining products as new arrivals
-
+const ShopMiddle = () => {
   return (
     <>
-      <Section title="Featured Products" subtitle="Summer Collection New Modern Design" products={featuredProducts} />
-      <section id="banner" className="section-m1">
-        <h4>Repair Services</h4>
-        <h2>
-          Up to <span>70% off</span> - All t-Shirts & Accessories
-        </h2>
-        <button className="normal">Explore More</button>
+      <section id="page-header">
+        <h2>#stayhome</h2>
+        <p>Save more on coupons & up to 70% off!</p>
       </section>
-      <Section title="New Arrivals" subtitle="Summer Collection New Modern Design" products={newArrivals} />
+      <section id="product1" className="section-p1">
+        <div className="pro-container">
+          {products.map((product) => (
+            <Product key={product.id} {...product} />
+          ))}
+        </div>
+      </section>
+      <section id="pagination">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">
+          <i className="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </section>
       <section id="newsletter" className="section-p1 section-m1">
         <div className="newstext">
           <h4>Sign Up For Newsletters</h4>
@@ -66,4 +60,4 @@ const MiddleContainer = () => {
   );
 };
 
-export default MiddleContainer;
+export default ShopMiddle;

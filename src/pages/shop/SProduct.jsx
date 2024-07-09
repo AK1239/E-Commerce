@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "../../layouts/header/Header";
-import ShopMiddle from "./ShopMiddle";
 import Footer from "../../layouts/footer/Footer";
+import SProductMiddle from "./SProductMiddle";
 
-const Shop = () => {
+const SProduct = () => {
   return (
     <>
       <Header />
-      <ShopMiddle />
+      <SProductMiddle />
       <Footer />
     </>
   );
 };
 
-export default Shop;
+export default SProduct;
