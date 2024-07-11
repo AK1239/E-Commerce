@@ -1,26 +1,29 @@
 import React from "react";
 import "./ShopMiddle.css";
+import { Link } from "react-router-dom";
 import { products } from "../../layouts/data.js";
 
-const Product = ({ src, brand, name, price }) => (
-  <div className="pro">
-    <img src={src} alt={name} />
-    <div className="des">
-      <span>{brand}</span>
-      <h5>{name}</h5>
-      <div className="star">
-        <i className="fas fa-star"></i>
-        <i className="fas fa-star"></i>
-        <i className="fas fa-star"></i>
-        <i className="fas fa-star"></i>
-        <i className="fas fa-star"></i>
+const Product = ({ id, src, brand, name, price }) => (
+  <Link to={`/shop/${id}`}>
+    <div className="pro">
+      <img src={src} alt={name} />
+      <div className="des">
+        <span>{brand}</span>
+        <h5>{name}</h5>
+        <div className="star">
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+        </div>
+        <h4>{price}</h4>
       </div>
-      <h4>{price}</h4>
+      <button>
+        <i className="fa-solid fa-cart-shopping cart"></i>
+      </button>
     </div>
-    <a href="#">
-      <i className="fa-solid fa-cart-shopping cart"></i>
-    </a>
-  </div>
+  </Link>
 );
 
 const ShopMiddle = () => {

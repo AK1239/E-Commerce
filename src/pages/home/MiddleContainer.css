@@ -189,7 +189,7 @@ button.normal {
 }
 
 @media (max-width: 477px) {
-  h2 {
+  #product1 h2 {
     font-size: 32px;
   }
 

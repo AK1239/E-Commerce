@@ -18,7 +18,7 @@ const Header = () => {
       setMenu("home");
     } else if (path === "/about") {
       setMenu("about");
-    } else if (path === "/shop") {
+    } else if (path.startsWith("/shop")) {
       setMenu("shop");
     } else if (path === "/contact") {
       setMenu("contact");

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import image1 from "../../assets/f1.jpg";
-import { featuredProducts } from "../../layouts/data";
-import { smallImages } from "../../layouts/data";
+import { featuredProducts, smallImages } from "../../layouts/data";
+import "./SProductMiddle.css";
 
 const SProductMiddle = () => {
   const [mainImage, setMainImage] = useState(image1);
@@ -37,7 +37,7 @@ const SProductMiddle = () => {
           </select>
           <input type="number" defaultValue={1} />
           <button className="normal">Add to Cart</button>
-          <h4>Product Details</h4>
+          <h4 className="details">Product Details</h4>
           <span>
             Gildan Ultra Cotton T-Shirt, Made from a substantial 6 oz per sq yd fabric constructed from 100% cotton, Classic fit preshrunk jersey
             knit. Offers unmatched comfort with each wear, Featuring a taped neck and shoulders, and a seamless double-needle collar, Available in a
