@@ -1,7 +1,10 @@
 import React from "react";
+import Newsletter from "../../layouts/newsletter/Newsletter.jsx";
+import bgImage from "../../assets/b1.jpg";
 import "./ShopMiddle.css";
 import { Link } from "react-router-dom";
 import { products } from "../../layouts/data.js";
+import Preview from "../../layouts/preview/Preview.jsx";
 
 const Product = ({ id, src, brand, name, price }) => (
   <Link to={`/shop/${id}`}>
@@ -29,10 +32,7 @@ const Product = ({ id, src, brand, name, price }) => (
 const ShopMiddle = () => {
   return (
     <>
-      <section id="page-header">
-        <h2>#stayhome</h2>
-        <p>Save more on coupons & up to 70% off!</p>
-      </section>
+      <Preview title="#stayhome" des="Save more on coupons & up to 70% off!" bg={bgImage} />
       <section id="product1" className="section-p1">
         <div className="pro-container">
           {products.map((product) => (
@@ -47,18 +47,7 @@ const ShopMiddle = () => {
           <i className="fa-solid fa-arrow-right-long"></i>
         </a>
       </section>
-      <section id="newsletter" className="section-p1 section-m1">
-        <div className="newstext">
-          <h4>Sign Up For Newsletters</h4>
-          <p>
-            Get E-mail updates about our latest shop and <span>special offers.</span>
-          </p>
-        </div>
-        <div className="form">
-          <input type="text" placeholder="Your email address" />
-          <button className="normal">Sign Up</button>
-        </div>
-      </section>
+      <Newsletter />
     </>
   );
 };

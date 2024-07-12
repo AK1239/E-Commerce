@@ -82,7 +82,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .menu-icon {
     display: none;
   }
@@ -92,7 +92,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   #header {
     padding: 15px 20px;
   }

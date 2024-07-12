@@ -4,20 +4,31 @@
 
 #product1 .pro-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 20px;
   flex-wrap: wrap;
 }
 
+#product1 .pro-container a {
+  width: 22%;
+  min-width: 250px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  transition: 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  margin-right: 25px;
+}
+
 #product1 .pro {
-  width: 23%;
+  width: 22%;
   min-width: 250px;
   padding: 10px 12px;
   border: 1px solid #cce7d0;
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-  margin: 15px 0;
+  margin: 15px;
   transition: 0.2s ease;
   position: relative;
 }
@@ -118,73 +129,17 @@ button.normal {
   color: #fff;
 }
 
-#newsletter {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  background-image: url(../../assets/b14.png);
-  background-repeat: no-repeat;
-  background-position: 20% 30%;
-  background-color: #041e42;
-}
-
-#newsletter .form {
-  display: flex;
-  width: 40%;
-}
-
-#newsletter h4 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #fff;
-}
-
-#newsletter p {
-  font-size: 14px;
-  font-weight: 600;
-  color: #818ea0;
-}
-
-#newsletter p span {
-  color: #ffbd27;
-}
-
-#newsletter input {
-  height: 3.125 rem;
-  padding: 0 1.25rem;
-  font-size: 14px;
-  width: 100%;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  outline: none;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-#newsletter button {
-  background-color: #088178;
-  color: #fff;
-  white-space: nowrap;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 @media (max-width: 768px) {
   #product1 .pro-container {
     justify-content: center;
   }
 
-  #product1 .pro {
+  #product1 .pro-container .pro {
     margin: 15px;
   }
 
   #banner {
     height: 20vh;
-  }
-
-  #newsletter .form {
-    width: 70%;
   }
 }
 
@@ -193,19 +148,11 @@ button.normal {
     font-size: 32px;
   }
 
-  #product1 .pro {
+  #product1 .pro-container .pro {
     width: 100%;
   }
 
   #banner {
     height: 40vh;
-  }
-
-  #newsletter {
-    padding: 40px 20px;
-  }
-
-  #newsletter .form {
-    width: 100%;
   }
 }
