@@ -129,7 +129,7 @@ button.normal {
   color: #fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
   #product1 .pro-container {
     justify-content: center;
   }

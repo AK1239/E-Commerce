@@ -31,7 +31,7 @@
   font-size: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
   #hero {
     height: 70vh;
     padding: 0 80px;

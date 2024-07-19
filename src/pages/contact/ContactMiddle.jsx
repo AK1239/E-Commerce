@@ -38,7 +38,7 @@ const ContactMiddle = () => {
           <span>GET IN TOUCH</span>
           <h2>Visit one of our agency locations or contact us today</h2>
           <h3>Head Office</h3>
-          <div>
+          <ul>
             <li>
               <i className="fas fa-map"></i>
               <p>Mbweni, Dar es Salaam</p>
@@ -55,7 +55,7 @@ const ContactMiddle = () => {
               <i className="far fa-clock"></i>
               <p>Monday to Saturday: 9:00am to 16:00pm</p>
             </li>
-          </div>
+          </ul>
         </div>
         <div className="map">
           <iframe

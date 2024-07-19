@@ -15,8 +15,14 @@ import image14 from "../assets/n6.jpg";
 import image15 from "../assets/n7.jpg";
 import image16 from "../assets/n8.jpg";
 import image17 from "../assets/1.png";
-import image18 from "../assets/1.png";
-import image19 from "../assets/1.png";
+import image18 from "../assets/2.png";
+import image19 from "../assets/3.png";
+import image20 from "../assets/f1.png";
+import image21 from "../assets/f2.png";
+import image22 from "../assets/f3.png";
+import image23 from "../assets/f4.png";
+import image24 from "../assets/f5.png";
+import image25 from "../assets/f6.png";
 
 export const products = [
   { id: 1, src: image1, brand: "adidas", name: "Cartoon Astronaut T-Shirts", price: "$78" },
@@ -47,3 +53,12 @@ export const featuredProducts = [
 export const smallImages = [image1, image2, image3, image4];
 
 export const peopleImages = [image17, image18, image19];
+
+export const featureImages = [
+  { img: image20, text: "Free Shipping" },
+  { img: image21, text: "Online Order" },
+  { img: image22, text: "Save Money" },
+  { img: image23, text: "Promotions" },
+  { img: image24, text: "Happy Sell" },
+  { img: image25, text: "24/7 Support" },
+];

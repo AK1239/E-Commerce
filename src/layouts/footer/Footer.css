@@ -61,7 +61,7 @@ footer .bold {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
   .footer {
     padding: 10px 20px;
   }
