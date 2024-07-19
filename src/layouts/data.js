@@ -14,6 +14,9 @@ import image13 from "../assets/n5.jpg";
 import image14 from "../assets/n6.jpg";
 import image15 from "../assets/n7.jpg";
 import image16 from "../assets/n8.jpg";
+import image17 from "../assets/1.png";
+import image18 from "../assets/1.png";
+import image19 from "../assets/1.png";
 
 export const products = [
   { id: 1, src: image1, brand: "adidas", name: "Cartoon Astronaut T-Shirts", price: "$78" },
@@ -42,3 +45,5 @@ export const featuredProducts = [
 ];
 
 export const smallImages = [image1, image2, image3, image4];
+
+export const peopleImages = [image17, image18, image19];

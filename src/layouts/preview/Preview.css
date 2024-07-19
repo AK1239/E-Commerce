@@ -13,3 +13,9 @@
 #page-header p {
   color: #fff;
 }
+
+@media (max-width: 477px) {
+  #page-header p {
+    font-size: 14px;
+  }
+}
