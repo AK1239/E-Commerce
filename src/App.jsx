@@ -3,6 +3,7 @@ import About from "./pages/about/About";
 import Shop from "./pages/shop/Shop";
 import SProduct from "./pages/shop/SProduct";
 import Contact from "./pages/contact/Contact";
+import Cart from "./pages/cart/Cart";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:productId" element={<SProduct />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>
   );
