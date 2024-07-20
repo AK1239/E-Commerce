@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/logo.png";
 import { FiMenu } from "react-icons/fi";
 import { FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 
 const Header = () => {
@@ -34,9 +33,9 @@ const Header = () => {
 
   return (
     <section id="header">
-      <a href="#">
+      <Link to="/">
         <img src={logo} alt="Logo" className="logo" />
-      </a>
+      </Link>
       <div className="nav-container">
         <span className="menu-icon" onClick={toggleMenu}>
           <FiMenu />
